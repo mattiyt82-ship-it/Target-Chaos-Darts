@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Target Darts Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+<header>
+<h1>Target Darts Platform</h1>
+<p class="subtitle">x01, Cricket & Chaos | Camera & Manual Input | NPC Bot</p>
+</header>
+
+<section class="game-selection">
+<label>Choose Game Mode:</label>
+<select id="gameModeSelect">
+<option value="x01">x01 Game</option>
+<option value="cricket">Cricket</option>
+<option value="chaos">Chaos Mode</option>
+</select>
+<button id="startGameBtn">Start Game</button>
+</section>
+
+<section class="player-setup">
+<label>Players (comma-separated)</label>
+<input type="text" id="playerNames" placeholder="Alice,Bob">
+<label>Player Type (H = Human, N = NPC)</label>
+<input type="text" id="playerTypes" placeholder="H,H">
+<label>Starting Score (x01 only)</label>
+<input type="number" id="x01Start" value="501">
+<button id="setupPlayersBtn">Setup Players</button>
+</section>
+
+<section class="dartboard-section">
+<canvas id="dartboardCanvas" width="600" height="600"></canvas>
+<div class="dart-controls">
+<input type="text" id="manualDart" placeholder="S20, T19, D5, 25, 50">
+<button id="throwDartBtn">Throw Dart</button>
+<button id="cameraDartBtn">Camera Throw</button>
+</div>
+</section>
+
+<section class="scoreboard">
+<h2>Scoreboard</h2>
+<div id="playersPanel"></div>
+<div id="statsPanel"></div>
+</section>
+
+<section class="controls">
+<button id="bankBtn">BANK SCORE</button>
+<button id="nextPlayerBtn">NEXT PLAYER</button>
+</section>
+
+</div>
+
+<script src="libs/howler.min.js"></script>
+<script src="libs/tensorflow.min.js"></script>
+<script src="stats/storage.js"></script>
+<script src="soundManager.js"></script>
+<script src="uiManager.js"></script>
+<script src="scoreManager.js"></script>
+<script src="statsManager.js"></script>
+<script src="cameraInput.js"></script>
+<script src="npcBot.js"></script>
+<script src="gameManager.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
